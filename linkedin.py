@@ -1,3 +1,6 @@
+'''
+    Original File.
+'''
 import argparse, os, time
 import urlparse, random
 from selenium import webdriver

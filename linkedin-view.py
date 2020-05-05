@@ -1,8 +1,15 @@
+'''
+    Updated File.
+    Author: Royce Leon DSouza
+    Last Edit: 5/5/2020
+    Comments: Started Working on the file Summer of 2019. And Bringing it back to life.
+'''
 import argparse, os, time
 import urlparse, random
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from bs4 import BeautifulSoup
+#Following Imports allow csv exports/
 import csv
 import requests
 import random
@@ -63,15 +70,12 @@ def toScrollorNottoScroll(browser):
     except:
         print "Scrapper Broke"
 
-
-
-
 def ViewBot(browser,args,plist_in):
     visited = []
     pList = plist_in
     count = 0
     retry = 0
-    people_page = 'https://www.linkedin.com/search/results/people/?facetGeoRegion=%5B%22us%3A77%22%5D&keywords=restaurant%20manager&origin=FACETED_SEARCH'
+    people_page = 'https://www.linkedin.com/search/results/all/?keywords=ceo%20centre%20county&origin=SPCK&spellCorrectionEnabled=false'
     #people_page = 'https://www.linkedin.com/groups/1976445/members/'
     browser.get(people_page)
     try:
